@@ -1,0 +1,10 @@
+{
+"SpaProxyServer": {
+"ServerUrl": "https://localhost:51905",
+"RedirectUrl": "",
+"LaunchCommand": "npm run dev",
+"WorkingDirectory": "C:\\Users\\Matheus Saad\\Documents\\workspace\\teste-desenvolvedor-pleno\\backend\\Products\\Products.Server\\..\\products.client",
+"MaxTimeoutInSeconds": "120",
+"KeepRunning": "false"
+}
+}

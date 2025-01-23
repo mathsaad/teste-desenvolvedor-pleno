@@ -1,0 +1,12 @@
+C:\Users\Matheus Saad\Documents\workspace\teste-desenvolvedor-pleno\backend\Products\Products.Contracts\bin\Debug\net9.0\Products.Contracts.deps.json
+C:\Users\Matheus Saad\Documents\workspace\teste-desenvolvedor-pleno\backend\Products\Products.Contracts\bin\Debug\net9.0\Products.Contracts.dll
+C:\Users\Matheus Saad\Documents\workspace\teste-desenvolvedor-pleno\backend\Products\Products.Contracts\bin\Debug\net9.0\Products.Contracts.pdb
+C:\Users\Matheus Saad\Documents\workspace\teste-desenvolvedor-pleno\backend\Products\Products.Contracts\obj\Debug\net9.0\Products.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Matheus Saad\Documents\workspace\teste-desenvolvedor-pleno\backend\Products\Products.Contracts\obj\Debug\net9.0\Products.Contracts.AssemblyInfoInputs.cache
+C:\Users\Matheus Saad\Documents\workspace\teste-desenvolvedor-pleno\backend\Products\Products.Contracts\obj\Debug\net9.0\Products.Contracts.AssemblyInfo.cs
+C:\Users\Matheus Saad\Documents\workspace\teste-desenvolvedor-pleno\backend\Products\Products.Contracts\obj\Debug\net9.0\Products.Contracts.csproj.CoreCompileInputs.cache
+C:\Users\Matheus Saad\Documents\workspace\teste-desenvolvedor-pleno\backend\Products\Products.Contracts\obj\Debug\net9.0\Products.Contracts.sourcelink.json
+C:\Users\Matheus Saad\Documents\workspace\teste-desenvolvedor-pleno\backend\Products\Products.Contracts\obj\Debug\net9.0\Products.Contracts.dll
+C:\Users\Matheus Saad\Documents\workspace\teste-desenvolvedor-pleno\backend\Products\Products.Contracts\obj\Debug\net9.0\refint\Products.Contracts.dll
+C:\Users\Matheus Saad\Documents\workspace\teste-desenvolvedor-pleno\backend\Products\Products.Contracts\obj\Debug\net9.0\Products.Contracts.pdb
+C:\Users\Matheus Saad\Documents\workspace\teste-desenvolvedor-pleno\backend\Products\Products.Contracts\obj\Debug\net9.0\ref\Products.Contracts.dll

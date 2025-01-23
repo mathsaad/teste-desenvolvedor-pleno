@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "GWFCHtePqjw=",
+  "success": false,
+  "projectFilePath": "C:\\Users\\Matheus Saad\\Documents\\workspace\\teste-desenvolvedor-pleno\\backend\\Products\\products.client\\products.client.esproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1012",
+      "level": "Error",
+      "message": "Platform version is not present for one or more target frameworks, even though they have specified a platform: net6.0-none"
+    }
+  ]
+}
