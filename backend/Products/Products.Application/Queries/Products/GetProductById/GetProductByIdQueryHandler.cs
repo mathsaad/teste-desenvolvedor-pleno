@@ -1,7 +1,9 @@
 using Mapster;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using Products.Contracts.Exceptions;
 using Products.Contracts.Responses;
+using Products.Domain.Entities;
 using Products.Infrastructure;
 
 namespace Products.Application.Queries.Products.GetProductById;
@@ -22,7 +24,7 @@ public class GetProductByIdQueryHandler : IRequestHandler<GetProductByIdQuery, G
 
         if (product is null)
         {
-            throw new Exception();
+            throw new NotFoundException($"{nameof(Product)} with {nameof(Product.Id)} : {request.Id} was not found in the database.");
         }
         
         return product.Adapt<GetProductByIdResponse>();

@@ -1,7 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 using Products.Application;
 using Products.Infrastructure;
+using Products.Server.Handlers;
 using Products.Server.Modules;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,7 +14,13 @@ builder.Services.AddDbContext<ProductsDbContext>(opt =>
     opt.UseSqlite(builder.Configuration.GetConnectionString("DbConnectionString"));
 });
 
+builder.Services.AddDbContext<CategoryDbContext>(opt =>
+{
+    opt.UseSqlite(builder.Configuration.GetConnectionString("DbConnectionString"));
+});
+
 builder.Services.AddApplication();
+builder.Services.AddExceptionHandler<ExceptionHandler>();
 
 var app = builder.Build();
 
@@ -22,6 +30,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseExceptionHandler(_ => { });
 app.UseHttpsRedirection();
 app.AddProductEndpoint();
+app.AddCategoryEndpoint();
 app.Run();

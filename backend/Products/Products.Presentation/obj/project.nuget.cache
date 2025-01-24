@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "E/WbHWi+pCU=",
+  "dgSpecHash": "f83ywl6Ymjk=",
   "success": true,
   "projectFilePath": "C:\\Users\\Matheus Saad\\Documents\\workspace\\teste-desenvolvedor-pleno\\backend\\Products\\Products.Presentation\\Products.Presentation.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Matheus Saad\\.nuget\\packages\\fluentvalidation\\12.0.0-preview1\\fluentvalidation.12.0.0-preview1.nupkg.sha512",
+    "C:\\Users\\Matheus Saad\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\12.0.0-preview1\\fluentvalidation.dependencyinjectionextensions.12.0.0-preview1.nupkg.sha512",
     "C:\\Users\\Matheus Saad\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Matheus Saad\\.nuget\\packages\\mapster\\7.4.2-pre02\\mapster.7.4.2-pre02.nupkg.sha512",
     "C:\\Users\\Matheus Saad\\.nuget\\packages\\mapster.core\\1.2.3-pre02\\mapster.core.1.2.3-pre02.nupkg.sha512",
@@ -41,6 +43,8 @@
     "C:\\Users\\Matheus Saad\\.nuget\\packages\\microsoft.extensions.primitives\\9.0.1\\microsoft.extensions.primitives.9.0.1.nupkg.sha512",
     "C:\\Users\\Matheus Saad\\.nuget\\packages\\microsoft.openapi\\1.6.14\\microsoft.openapi.1.6.14.nupkg.sha512",
     "C:\\Users\\Matheus Saad\\.nuget\\packages\\mono.texttemplating\\3.0.0\\mono.texttemplating.3.0.0.nupkg.sha512",
+    "C:\\Users\\Matheus Saad\\.nuget\\packages\\polly\\8.5.1\\polly.8.5.1.nupkg.sha512",
+    "C:\\Users\\Matheus Saad\\.nuget\\packages\\polly.core\\8.5.1\\polly.core.8.5.1.nupkg.sha512",
     "C:\\Users\\Matheus Saad\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.1.10\\sqlitepclraw.bundle_e_sqlite3.2.1.10.nupkg.sha512",
     "C:\\Users\\Matheus Saad\\.nuget\\packages\\sqlitepclraw.core\\2.1.10\\sqlitepclraw.core.2.1.10.nupkg.sha512",
     "C:\\Users\\Matheus Saad\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.1.10\\sqlitepclraw.lib.e_sqlite3.2.1.10.nupkg.sha512",

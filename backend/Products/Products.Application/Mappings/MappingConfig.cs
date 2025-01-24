@@ -13,5 +13,11 @@ public class MappingConfig
         
         TypeAdapterConfig<Product, GetProductByIdResponse>.NewConfig()
             .Map(dest => dest.ProductsDto, src => src);
+        
+        TypeAdapterConfig<List<Category>, GetCategoryResponse>.NewConfig()
+            .Map(dest => dest.CategoriesDto, src => src);
+        
+        TypeAdapterConfig<Category, GetCategoryByIdResponse>.NewConfig()
+            .Map(dest => dest.CategoriesDto, src => src);
     }
 }

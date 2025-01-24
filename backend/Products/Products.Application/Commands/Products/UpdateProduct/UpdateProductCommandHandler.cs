@@ -1,5 +1,7 @@
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using Products.Contracts.Exceptions;
+using Products.Domain.Entities;
 using Products.Infrastructure;
 
 namespace Products.Application.Commands.Products.UpdateProduct;
@@ -20,7 +22,7 @@ public class UpdateProductCommandHandler : IRequestHandler<UpdateProductCommand,
             .FirstOrDefaultAsync(x => x.Id == request.Id, cancellationToken);
         if (product is null)
         {
-            throw new Exception();
+            throw new NotFoundException($"{nameof(Product)} with {nameof(Product.Id)} : {request.Id} was not found in the database.");
         }
         
         product.Name = request.Name;
