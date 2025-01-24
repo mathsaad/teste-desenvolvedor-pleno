@@ -7,7 +7,7 @@ using Products.Infrastructure;
 
 namespace Products.Application.Queries.Category.GetCategoryById;
 
-public class GetCategoryByIdQueryHandler: IRequestHandler<GetCategoryByIdQuery, GetCategoryByIdResponse>
+public class GetCategoryByIdQueryHandler : IRequestHandler<GetCategoryByIdQuery, GetCategoryByIdResponse>
 {
     private readonly CategoryDbContext _categoryDbContext;
 

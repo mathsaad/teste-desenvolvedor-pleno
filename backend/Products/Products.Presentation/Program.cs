@@ -19,6 +19,12 @@ builder.Services.AddDbContext<CategoryDbContext>(opt =>
     opt.UseSqlite(builder.Configuration.GetConnectionString("DbConnectionString"));
 });
 
+builder.Services.AddDbContext<SupplierDbContext>(opt =>
+{
+    opt.UseSqlite(builder.Configuration.GetConnectionString("DbConnectionString"));
+});
+
+
 builder.Services.AddApplication();
 builder.Services.AddExceptionHandler<ExceptionHandler>();
 
@@ -34,4 +40,5 @@ app.UseExceptionHandler(_ => { });
 app.UseHttpsRedirection();
 app.AddProductEndpoint();
 app.AddCategoryEndpoint();
+app.AddSupplierEndpoint();
 app.Run();
