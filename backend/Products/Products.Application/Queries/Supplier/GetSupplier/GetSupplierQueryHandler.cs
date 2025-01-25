@@ -9,9 +9,9 @@ namespace Products.Application.Queries.Supplier.GetSupplier;
 public class GetSupplierQueryHandler: IRequestHandler<GetSupplierQuery, GetSupplierResponse>
 {
     
-    private readonly SupplierDbContext _supplierDbContext;
+    private readonly ProductsDbContext _supplierDbContext;
 
-    public GetSupplierQueryHandler(SupplierDbContext supplierDbContext)
+    public GetSupplierQueryHandler(ProductsDbContext supplierDbContext)
     {
         _supplierDbContext = supplierDbContext;
     }

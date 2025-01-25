@@ -5,9 +5,9 @@ namespace Products.Application.Commands.Category.CreateCategory;
 
 public class CreateCategoryCommandHandler : IRequestHandler<CreateCategoryCommand, int>
 {
-    private readonly CategoryDbContext _categoryDbContext;
+    private readonly ProductsDbContext _categoryDbContext;
     
-    public CreateCategoryCommandHandler(CategoryDbContext categoryDbContext)
+    public CreateCategoryCommandHandler(ProductsDbContext categoryDbContext)
     {
         _categoryDbContext = categoryDbContext;
     }

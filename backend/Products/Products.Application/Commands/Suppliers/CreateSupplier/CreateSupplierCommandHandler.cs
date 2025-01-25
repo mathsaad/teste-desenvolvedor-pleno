@@ -6,9 +6,9 @@ namespace Products.Application.Commands.Suppliers.CreateSupplier;
 
 public class CreateSupplierCommandHandler : IRequestHandler<CreateSupplierCommand, int>
 {
-    private readonly SupplierDbContext _supplierDbContext;
+    private readonly ProductsDbContext _supplierDbContext;
 
-    public CreateSupplierCommandHandler(SupplierDbContext supplierDbContext)
+    public CreateSupplierCommandHandler(ProductsDbContext supplierDbContext)
     {
         _supplierDbContext = supplierDbContext;
     }

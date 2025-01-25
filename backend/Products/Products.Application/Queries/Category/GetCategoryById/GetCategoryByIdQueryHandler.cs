@@ -9,9 +9,9 @@ namespace Products.Application.Queries.Category.GetCategoryById;
 
 public class GetCategoryByIdQueryHandler : IRequestHandler<GetCategoryByIdQuery, GetCategoryByIdResponse>
 {
-    private readonly CategoryDbContext _categoryDbContext;
+    private readonly ProductsDbContext _categoryDbContext;
 
-    public GetCategoryByIdQueryHandler(CategoryDbContext categoryDbContext)
+    public GetCategoryByIdQueryHandler(ProductsDbContext categoryDbContext)
     {
         _categoryDbContext = categoryDbContext;
     }

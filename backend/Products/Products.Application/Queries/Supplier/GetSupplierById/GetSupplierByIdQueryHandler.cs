@@ -9,10 +9,10 @@ namespace Products.Application.Queries.Supplier.GetSupplierById;
 
 public class GetSupplierByIdQueryHandler : IRequestHandler<GetSupplierByIdQuery, GetSupplierByIdResponse>
 {
-    private readonly SupplierDbContext _supplierDbContext;
+    private readonly ProductsDbContext _supplierDbContext;
 
 
-    public GetSupplierByIdQueryHandler(SupplierDbContext supplierDbContext)
+    public GetSupplierByIdQueryHandler(ProductsDbContext supplierDbContext)
     {
         _supplierDbContext = supplierDbContext;
     }

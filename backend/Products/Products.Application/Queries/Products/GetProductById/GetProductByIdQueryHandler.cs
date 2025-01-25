@@ -21,10 +21,14 @@ public class GetProductByIdQueryHandler : IRequestHandler<GetProductByIdQuery, G
     {
         var product = await _productsDbContext
             .Products.FirstOrDefaultAsync( x => x.Id == request.Id, cancellationToken);
-
+        
         if (product is null)
         {
             throw new NotFoundException($"{nameof(Product)} with {nameof(Product.Id)} : {request.Id} was not found in the database.");
+        }
+        if (product.IsDeleted)
+        {
+            throw new DeletedException($"Product {request.Id} has been deleted.");
         }
         
         return product.Adapt<GetProductByIdResponse>();

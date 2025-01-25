@@ -7,9 +7,9 @@ namespace Products.Application.Commands.Category.DeleteCategory;
 
 public class DeleteCategoryCommandHandler : IRequestHandler<DeleteCategoryCommand, Unit>
 {
-    private readonly CategoryDbContext _categoryDbContext;
+    private readonly ProductsDbContext _categoryDbContext;
 
-    public DeleteCategoryCommandHandler(CategoryDbContext categoryDbContext)
+    public DeleteCategoryCommandHandler(ProductsDbContext categoryDbContext)
     {
         _categoryDbContext = categoryDbContext;
     }

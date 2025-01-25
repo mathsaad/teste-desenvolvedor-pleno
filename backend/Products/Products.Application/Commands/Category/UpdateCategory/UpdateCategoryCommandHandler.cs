@@ -7,9 +7,9 @@ namespace Products.Application.Commands.Category.UpdateCategory;
 
 public class UpdateCategoryCommandHandler : IRequestHandler<UpdateCategoryCommand, Unit>
 {
-    private readonly CategoryDbContext _categoryDbContext;
+    private readonly ProductsDbContext _categoryDbContext;
 
-    public UpdateCategoryCommandHandler(CategoryDbContext categoryDbContext )
+    public UpdateCategoryCommandHandler(ProductsDbContext categoryDbContext )
     {
         _categoryDbContext = categoryDbContext;
     }

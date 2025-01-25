@@ -7,5 +7,5 @@ public class Product : BaseEntity
     public decimal Price { get; set; }
     public int Quantity { get; set; }
     public int CategoryId { get; set; }
-    public bool isDeleted { get; set; }
+    public bool IsDeleted { get; set; }
 }

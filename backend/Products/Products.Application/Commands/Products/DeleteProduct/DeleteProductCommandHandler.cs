@@ -24,7 +24,8 @@ public class DeleteProductCommandHandler : IRequestHandler<DeleteProductCommand,
             throw new NotFoundException($"{nameof(Product)} with {nameof(Product.Id)} : {request.Id} was not found in the database.");
         }
 
-        _productsDbContext.Products.Remove(product);
+        product.IsDeleted = true;
+        _productsDbContext.Products.Update(product);
         await _productsDbContext.SaveChangesAsync(cancellationToken);
         
         return Unit.Value;

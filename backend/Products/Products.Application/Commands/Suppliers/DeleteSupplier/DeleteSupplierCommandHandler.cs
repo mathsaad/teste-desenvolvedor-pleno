@@ -8,9 +8,9 @@ namespace Products.Application.Commands.Suppliers.DeleteSupplier;
 
 public class DeleteSupplierCommandHandler: IRequestHandler<DeleteSupplierCommand, Unit>
 {
-    private readonly SupplierDbContext _supplierDbContext;
+    private readonly ProductsDbContext _supplierDbContext;
 
-    public DeleteSupplierCommandHandler(SupplierDbContext supplierDbContext)
+    public DeleteSupplierCommandHandler(ProductsDbContext supplierDbContext)
     {
         _supplierDbContext = supplierDbContext;
     }

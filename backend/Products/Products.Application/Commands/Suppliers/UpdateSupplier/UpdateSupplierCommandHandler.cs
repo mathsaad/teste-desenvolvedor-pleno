@@ -8,9 +8,9 @@ namespace Products.Application.Commands.Suppliers.UpdateSupplier;
 
 public class UpdateSupplierCommandHandler : IRequestHandler<UpdateSupplierCommand, Unit>
 {
-    private readonly SupplierDbContext _supplierDbContext;
+    private readonly ProductsDbContext _supplierDbContext;
 
-    public UpdateSupplierCommandHandler(SupplierDbContext supplierDbContext)
+    public UpdateSupplierCommandHandler(ProductsDbContext supplierDbContext)
     {
         _supplierDbContext = supplierDbContext;
     }

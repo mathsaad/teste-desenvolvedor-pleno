@@ -6,11 +6,11 @@ using Products.Infrastructure;
 
 namespace Products.Application.Queries.Products.GetProduct;
 
-public class GetProductsQueryHanler : IRequestHandler<GetProductsQuery, GetProductsResponse>
+public class GetProductsQueryHandler : IRequestHandler<GetProductsQuery, GetProductsResponse>
 {
     private readonly ProductsDbContext _productsDbContext;
     
-    public GetProductsQueryHanler(ProductsDbContext productsDbContext)
+    public GetProductsQueryHandler(ProductsDbContext productsDbContext)
     {
         _productsDbContext = productsDbContext;
     }
@@ -18,6 +18,8 @@ public class GetProductsQueryHanler : IRequestHandler<GetProductsQuery, GetProdu
     public async Task<GetProductsResponse> Handle(GetProductsQuery request, CancellationToken cancellationToken)
     {
         var products = await _productsDbContext.Products.ToListAsync(cancellationToken);
+        
+        products.RemoveAll(product => product.IsDeleted);
 
         return products.Adapt<GetProductsResponse>();
     }

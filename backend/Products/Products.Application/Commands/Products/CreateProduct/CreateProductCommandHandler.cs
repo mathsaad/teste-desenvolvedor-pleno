@@ -22,7 +22,8 @@ public class CreateProductCommandHandler : IRequestHandler<CreateProductCommand,
             Price = request.Price,
             Quantity = request.Quantity,
             CategoryId = request.CategoryId,
-            DateCreated = DateTime.Now.ToUniversalTime()
+            DateCreated = DateTime.Now.ToUniversalTime(),
+            IsDeleted = false
         };
         
         await _productsDbContext.Products.AddAsync(product, cancellationToken);
