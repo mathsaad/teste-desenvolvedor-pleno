@@ -25,11 +25,29 @@ public class UpdateProductCommandHandler : IRequestHandler<UpdateProductCommand,
             throw new NotFoundException($"{nameof(Product)} with {nameof(Product.Id)} : {request.Id} was not found in the database.");
         }
         
+        var category = await _productsDbContext.Categories.FindAsync(request.CategoryId);
+        if (category == null)
+            throw new NotFoundException($"Categoria com ID {request.CategoryId} não encontrada.");
+        
+        
+        var suppliers = await _productsDbContext.Suppliers
+            .Where(s => request.SupplierIds.Contains(s.Id))
+            .ToListAsync();
+        
+        var supplierIds = suppliers.Select(s => s.Id).Where(s => request.SupplierIds.Contains(s)).ToList();
+
+        if (suppliers.Count != request.SupplierIds.Count)
+            throw new NotFoundException("Um ou mais fornecedores não foram encontrados.");
+
+        
         product.Name = request.Name;
         product.Description = request.Description;
         product.Price = request.Price;
         product.Quantity = request.Quantity;
-        product.CategoryId = request.CategoryId;
+        product.CategoriaId = request.CategoryId;
+        product.Category = category;
+        product.SuppliersId = supplierIds;
+        product.Suppliers = suppliers;
         product.DateModified = DateTime.Now.ToUniversalTime();
         
         _productsDbContext.Products.Update(product);

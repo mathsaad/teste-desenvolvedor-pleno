@@ -357,6 +357,9 @@
       "Products.Contracts/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Products.Domain": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/Products.Contracts.dll": {}
         },

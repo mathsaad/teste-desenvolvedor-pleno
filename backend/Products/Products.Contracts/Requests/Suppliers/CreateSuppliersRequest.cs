@@ -1,3 +1,3 @@
 namespace Products.Contracts.Requests.Suppliers;
 
-public record CreateSuppliersRequest(string Name, int Cnpj, string Phone, string Address);
+public record CreateSuppliersRequest(string Name, string Cnpj, string Phone, string Address);

@@ -17,6 +17,11 @@ public class ValidationBehavior<TRequest, TResponse> : IPipelineBehavior<TReques
     public async Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next,
         CancellationToken cancellationToken)
     {
+        if (request == null)
+        {
+            throw new ArgumentNullException(nameof(request), "O comando recebido é nulo.");
+        }
+
         var context = new ValidationContext<TRequest>(request);
         
         var validationResults = await Task.WhenAll(_validators.Select(v => v.ValidateAsync(context, cancellationToken)));

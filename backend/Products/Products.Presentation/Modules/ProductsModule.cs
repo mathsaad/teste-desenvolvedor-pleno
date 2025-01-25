@@ -28,7 +28,7 @@ public static class ProductsModule
         app.MapPost("/api/products", async (IMediator mediator, CreateProductRequest productRequest, CancellationToken ct) =>
         {
             var command = new CreateProductCommand(productRequest.Name, productRequest.Description,
-                productRequest.Price, productRequest.Quantity, productRequest.CategoryId);
+                productRequest.Price, productRequest.Quantity, productRequest.CategoryId, productRequest.SupplierIds);
             var result = await mediator.Send(command, ct);
             
             return Results.Ok(result);
@@ -39,7 +39,7 @@ public static class ProductsModule
             async (IMediator mediator, int id, UpdateProductRequest productRequest, CancellationToken ct) =>
             {
                 var command = new UpdateProductCommand(id, productRequest.Name, productRequest.Description,
-                    productRequest.Price, productRequest.Quantity, productRequest.CategoryId);
+                    productRequest.Price, productRequest.Quantity, productRequest.CategoryId, productRequest.SupplierIds);
                 var result = await mediator.Send(command, ct);
                 return Results.Ok(result);
             }).WithTags("Products");

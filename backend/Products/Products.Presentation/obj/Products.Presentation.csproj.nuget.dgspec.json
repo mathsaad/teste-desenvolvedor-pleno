@@ -129,7 +129,11 @@
         "frameworks": {
           "net9.0": {
             "targetAlias": "net9.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\Matheus Saad\\Documents\\workspace\\teste-desenvolvedor-pleno\\backend\\Products\\Products.Domain\\Products.Domain.csproj": {
+                "projectPath": "C:\\Users\\Matheus Saad\\Documents\\workspace\\teste-desenvolvedor-pleno\\backend\\Products\\Products.Domain\\Products.Domain.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

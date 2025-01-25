@@ -2,4 +2,4 @@ using MediatR;
 
 namespace Products.Application.Commands.Suppliers.CreateSupplier;
 
-public record CreateSupplierCommand(string Name, int Cnpj, string Phone, string Address) : IRequest<int>;
+public record CreateSupplierCommand(string Name, String Cnpj, string Phone, string Address) : IRequest<int>;

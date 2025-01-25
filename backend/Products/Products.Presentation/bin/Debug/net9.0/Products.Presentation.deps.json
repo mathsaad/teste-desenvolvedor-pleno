@@ -875,6 +875,9 @@
         }
       },
       "Products.Contracts/1.0.0": {
+        "dependencies": {
+          "Products.Domain": "1.0.0"
+        },
         "runtime": {
           "Products.Contracts.dll": {
             "assemblyVersion": "1.0.0",

@@ -1,3 +1,9 @@
 namespace Products.Contracts.Dtos;
 
-public record SuppliersDto(string Name, int Cnpj, string Phone, string Address);
+public record SuppliersDto(
+    int Id,
+    string Name,
+    string Cnpj,
+    string Phone,
+    string Address
+    );

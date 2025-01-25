@@ -10,3 +10,7 @@ C:\Users\Matheus Saad\Documents\workspace\teste-desenvolvedor-pleno\backend\Prod
 C:\Users\Matheus Saad\Documents\workspace\teste-desenvolvedor-pleno\backend\Products\Products.Contracts\obj\Debug\net9.0\refint\Products.Contracts.dll
 C:\Users\Matheus Saad\Documents\workspace\teste-desenvolvedor-pleno\backend\Products\Products.Contracts\obj\Debug\net9.0\Products.Contracts.pdb
 C:\Users\Matheus Saad\Documents\workspace\teste-desenvolvedor-pleno\backend\Products\Products.Contracts\obj\Debug\net9.0\ref\Products.Contracts.dll
+C:\Users\Matheus Saad\Documents\workspace\teste-desenvolvedor-pleno\backend\Products\Products.Contracts\bin\Debug\net9.0\Products.Domain.dll
+C:\Users\Matheus Saad\Documents\workspace\teste-desenvolvedor-pleno\backend\Products\Products.Contracts\bin\Debug\net9.0\Products.Domain.pdb
+C:\Users\Matheus Saad\Documents\workspace\teste-desenvolvedor-pleno\backend\Products\Products.Contracts\obj\Debug\net9.0\Products.Contracts.csproj.AssemblyReference.cache
+C:\Users\Matheus Saad\Documents\workspace\teste-desenvolvedor-pleno\backend\Products\Products.Contracts\obj\Debug\net9.0\Products.A33E3E78.Up2Date

@@ -1,6 +1,7 @@
 using Mapster;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using Products.Contracts.Dtos;
 using Products.Contracts.Responses;
 using Products.Infrastructure;
 
@@ -17,9 +18,11 @@ public class GetProductsQueryHandler : IRequestHandler<GetProductsQuery, GetProd
 
     public async Task<GetProductsResponse> Handle(GetProductsQuery request, CancellationToken cancellationToken)
     {
-        var products = await _productsDbContext.Products.ToListAsync(cancellationToken);
-        
-        products.RemoveAll(product => product.IsDeleted);
+        var products = await _productsDbContext.Products
+            .Include(p => p.Suppliers)
+            .Include(p=>p.Category)
+            .Where(p => !p.IsDeleted)
+            .ToListAsync(cancellationToken);
 
         return products.Adapt<GetProductsResponse>();
     }

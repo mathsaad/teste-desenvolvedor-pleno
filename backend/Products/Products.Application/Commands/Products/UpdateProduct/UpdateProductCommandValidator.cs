@@ -23,12 +23,15 @@ public class UpdateProductCommandValidator : AbstractValidator<UpdateProductComm
             .WithMessage($"{nameof(Product.Description)} não pode conter mais que 5000 caracteres.");
         RuleFor(x => x.CategoryId)
             .NotEmpty()
-            .WithMessage($"{nameof(Product.CategoryId)} não pode ser vazio.");
+            .WithMessage($"{nameof(Product.Category)} não pode ser vazio.");
         RuleFor(x => x.Quantity)
             .NotEmpty()
             .WithMessage($"{nameof(Product.Quantity)} não pode ser vazio.");
         RuleFor(x => x.Price)
             .NotEmpty()
             .WithMessage($"{nameof(Product.Price)} não pode ser vazio.");
+        RuleFor(x => x.SupplierIds)
+            .NotEmpty()
+            .WithMessage($"{nameof(Product.Suppliers)} não pode ser vazio.");
     }
 }

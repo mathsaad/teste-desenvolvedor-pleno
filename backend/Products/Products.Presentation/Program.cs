@@ -1,5 +1,7 @@
+using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Products.Application;
+using Products.Application.Behaviors;
 using Products.Infrastructure;
 using Products.Server.Handlers;
 using Products.Server.Modules;
@@ -13,7 +15,7 @@ builder.Services.AddDbContext<ProductsDbContext>(opt =>
 {
     opt.UseSqlite(builder.Configuration.GetConnectionString("DbConnectionString"));
 });
-
+builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
 builder.Services.AddApplication();
 builder.Services.AddExceptionHandler<ExceptionHandler>();
 
