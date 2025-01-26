@@ -18,6 +18,12 @@ builder.Services.AddDbContext<ProductsDbContext>(opt =>
 builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
 builder.Services.AddApplication();
 builder.Services.AddExceptionHandler<ExceptionHandler>();
+builder.Services.AddCors(opt => {
+    opt.AddPolicy("CorsPolicy", policyBuilder =>
+    {
+        policyBuilder.AllowAnyHeader().AllowAnyMethod().WithOrigins("http://localhost:5173");
+    });
+});
 
 var app = builder.Build();
 
@@ -28,6 +34,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseExceptionHandler(_ => { });
+app.UseCors("CorsPolicy");
 app.UseHttpsRedirection();
 app.AddProductEndpoint();
 app.AddCategoryEndpoint();

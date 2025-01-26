@@ -166,3 +166,8 @@ C:\Users\Matheus Saad\Documents\workspace\teste-desenvolvedor-pleno\backend\Prod
 C:\Users\Matheus Saad\Documents\workspace\teste-desenvolvedor-pleno\backend\Products\Products.Presentation\bin\Debug\net9.0\FluentValidation.DependencyInjectionExtensions.dll
 C:\Users\Matheus Saad\Documents\workspace\teste-desenvolvedor-pleno\backend\Products\Products.Presentation\bin\Debug\net9.0\Polly.dll
 C:\Users\Matheus Saad\Documents\workspace\teste-desenvolvedor-pleno\backend\Products\Products.Presentation\bin\Debug\net9.0\Polly.Core.dll
+C:\Users\Matheus Saad\Documents\workspace\teste-desenvolvedor-pleno\backend\Products\Products.Presentation\bin\Debug\net9.0\Client\Products\package-lock.json
+C:\Users\Matheus Saad\Documents\workspace\teste-desenvolvedor-pleno\backend\Products\Products.Presentation\bin\Debug\net9.0\Client\Products\package.json
+C:\Users\Matheus Saad\Documents\workspace\teste-desenvolvedor-pleno\backend\Products\Products.Presentation\bin\Debug\net9.0\Client\Products\tsconfig.app.json
+C:\Users\Matheus Saad\Documents\workspace\teste-desenvolvedor-pleno\backend\Products\Products.Presentation\bin\Debug\net9.0\Client\Products\tsconfig.json
+C:\Users\Matheus Saad\Documents\workspace\teste-desenvolvedor-pleno\backend\Products\Products.Presentation\bin\Debug\net9.0\Client\Products\tsconfig.node.json

@@ -3,7 +3,7 @@
 "ServerUrl": "https://localhost:51905",
 "RedirectUrl": "",
 "LaunchCommand": "npm run dev",
-"WorkingDirectory": "C:\\Users\\Matheus Saad\\Documents\\workspace\\teste-desenvolvedor-pleno\\backend\\Products\\Products.Presentation\\..\\products.client",
+"WorkingDirectory": "C:\\Users\\Matheus Saad\\Documents\\workspace\\teste-desenvolvedor-pleno\\backend\\Products\\Products.Presentation\\.\\Client\\Products\\",
 "MaxTimeoutInSeconds": "120",
 "KeepRunning": "false"
 }

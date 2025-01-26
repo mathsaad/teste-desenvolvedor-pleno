@@ -19,8 +19,11 @@ public class GetProductByIdQueryHandler : IRequestHandler<GetProductByIdQuery, G
 
     public async Task<GetProductByIdResponse> Handle(GetProductByIdQuery request, CancellationToken cancellationToken)
     {
-        var product = await _productsDbContext
-            .Products.FirstOrDefaultAsync( x => x.Id == request.Id, cancellationToken);
+        var product = await _productsDbContext.Products
+            .Include(p => p.Suppliers)
+            .Include(p=>p.Category)
+            .Where(p => !p.IsDeleted)
+            .FirstOrDefaultAsync( x => x.Id == request.Id, cancellationToken);
         
         if (product is null)
         {

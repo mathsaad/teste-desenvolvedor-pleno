@@ -18,9 +18,10 @@ public class GetProductsQueryHandler : IRequestHandler<GetProductsQuery, GetProd
 
     public async Task<GetProductsResponse> Handle(GetProductsQuery request, CancellationToken cancellationToken)
     {
+        
         var products = await _productsDbContext.Products
-            .Include(p => p.Suppliers)
             .Include(p=>p.Category)
+            .Include(p => p.Suppliers)
             .Where(p => !p.IsDeleted)
             .ToListAsync(cancellationToken);
 

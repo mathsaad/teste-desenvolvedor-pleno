@@ -10,5 +10,6 @@ public record ProductsDto(
     int Quantity,
     int CategoryId,
     string CategoryName,
+    string CategoryDescription,
     List<SuppliersDto> Suppliers
 );

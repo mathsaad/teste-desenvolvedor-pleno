@@ -4,10 +4,10 @@
     <TargetFramework>net9.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <SpaRoot>..\products.client</SpaRoot>
+    <SpaRoot>.\Client\Products\</SpaRoot>
     <SpaProxyLaunchCommand>npm run dev</SpaProxyLaunchCommand>
     <SpaProxyServerUrl>https://localhost:51905</SpaProxyServerUrl>
-    <RootNamespace>Products.Server</RootNamespace>
+    <RootNamespace>Products.Presentation</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
