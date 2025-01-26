@@ -43,9 +43,9 @@ const apiConnector = {
         }
     },
     
-    editProduct: async (product: ProductDtoRequest): Promise<void> => {
+    editProduct: async (productId: number, product: ProductDtoRequest): Promise<void> => {
         try {
-            await axios.put(`${API_BASE_URL}/products`, product);
+            await axios.put(`${API_BASE_URL}/products/${productId}`, product);
         }catch (error) {
             console.log(error);
             throw error;

@@ -1,4 +1,5 @@
 export interface ProductDtoRequest  {
+    id: number | undefined;
     name: string;
     description: string;
     price: number;

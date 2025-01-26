@@ -22,13 +22,13 @@ export default function ProductForm() {
         categoryName: "",
         categoryDescription: "",
         createdDate: "",
-        suppliersDto: [],
+        suppliers: [],
     });
 
     const [_, setCategories] = useState<CategoriesDto[]>([]);
     const [suppliers, setSuppliers] = useState<SuppliersDto[]>([]);
     const [categoryOptions, setCategoryOptions] = useState<OptionDto[]>([]);
-    const [selectedSuppliers, setSelectedSuppliers] = useState<number[]>([]); // Estado para fornecedores selecionados
+    const [selectedSuppliers, setSelectedSuppliers] = useState<number[]>([]);
 
     async function getCategories() {
         const response = await apiConnector.getCategoriesOptions();
@@ -51,6 +51,11 @@ export default function ProductForm() {
         if (id) {
             apiConnector.getProductById(id).then((product) => {
                 setProduct(product);
+
+                if (Array.isArray(product.suppliers)) {
+                    const suppliersId: number[] = product.suppliers.map((supplier) => supplier.id);
+                    setSelectedSuppliers(suppliersId);
+                }
             });
         }
         getCategories();
@@ -58,9 +63,8 @@ export default function ProductForm() {
     }, [id]);
 
     function handleSubmit() {
-        console.log(selectedSuppliers)
-        
         const productRequest : ProductDtoRequest = {
+            id: product.id,
             name: product.name,
             description: product.description,
             price: product.price,
@@ -74,7 +78,7 @@ export default function ProductForm() {
         if (!product.id) {
             apiConnector.createProduct(productRequest).then(() => navigate("/"));
         } else {
-            apiConnector.editProduct(productRequest).then(() => navigate("/"));
+            apiConnector.editProduct(product.id, productRequest).then(() => navigate("/"));
         }
     }
 
@@ -136,7 +140,7 @@ export default function ProductForm() {
                                 label={supplier.name}
                                 control="input"
                                 type="checkbox"
-                                checked={selectedSuppliers.includes(supplier.id)} // Marca o checkbox se o fornecedor estiver selecionado
+                                checked={selectedSuppliers.includes(supplier.id)}
                                 onChange={() => handleSupplierChange(supplier.id)}
                             />
                         ))

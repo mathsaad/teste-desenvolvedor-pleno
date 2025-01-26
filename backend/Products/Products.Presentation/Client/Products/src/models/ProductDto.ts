@@ -10,5 +10,5 @@ export interface ProductDto {
     categoryId: number | undefined;
     categoryName: string;
     categoryDescription: string;
-    suppliersDto: SuppliersDto[]
+    suppliers: SuppliersDto[]
 }
