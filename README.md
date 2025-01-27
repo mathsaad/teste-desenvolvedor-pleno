@@ -4,7 +4,7 @@
 **Clonar o Repositório**
    ```bash
     git clone https://github.com/mathsaad/teste-desenvolvedor-pleno.git
-    cd teste-desenvolvedor-pleno/backend/products
+    cd teste-desenvolvedor-pleno/backend/Products
   ````
 
 Restaurar Dependências
