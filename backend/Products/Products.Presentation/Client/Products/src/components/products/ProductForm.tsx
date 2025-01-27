@@ -73,8 +73,6 @@ export default function ProductForm() {
             supplierIds: selectedSuppliers,
         };
         
-        console.log(productRequest)
-        
         if (!product.id) {
             apiConnector.createProduct(productRequest).then(() => navigate("/"));
         } else {
@@ -122,6 +120,7 @@ export default function ProductForm() {
                 <FormInput
                     placeholder="Quantidade"
                     name="quantity"
+                    type="number"
                     value={product.quantity}
                     onChange={handleInputChange}
                 />
