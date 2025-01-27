@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Products.Application;
 using Products.Application.Behaviors;
 using Products.Infrastructure;
-using Products.Server.Handlers;
+using Products.Presentation.Handlers;
 using Products.Server.Modules;
 
 

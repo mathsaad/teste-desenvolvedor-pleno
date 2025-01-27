@@ -171,3 +171,11 @@ C:\Users\Matheus Saad\Documents\workspace\teste-desenvolvedor-pleno\backend\Prod
 C:\Users\Matheus Saad\Documents\workspace\teste-desenvolvedor-pleno\backend\Products\Products.Presentation\bin\Debug\net9.0\Client\Products\tsconfig.app.json
 C:\Users\Matheus Saad\Documents\workspace\teste-desenvolvedor-pleno\backend\Products\Products.Presentation\bin\Debug\net9.0\Client\Products\tsconfig.json
 C:\Users\Matheus Saad\Documents\workspace\teste-desenvolvedor-pleno\backend\Products\Products.Presentation\bin\Debug\net9.0\Client\Products\tsconfig.node.json
+C:\Users\Matheus Saad\Documents\workspace\teste-desenvolvedor-pleno\backend\Products\Products.Presentation\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Matheus Saad\Documents\workspace\teste-desenvolvedor-pleno\backend\Products\Products.Presentation\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Matheus Saad\Documents\workspace\teste-desenvolvedor-pleno\backend\Products\Products.Presentation\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Matheus Saad\Documents\workspace\teste-desenvolvedor-pleno\backend\Products\Products.Presentation\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Matheus Saad\Documents\workspace\teste-desenvolvedor-pleno\backend\Products\Products.Presentation\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Matheus Saad\Documents\workspace\teste-desenvolvedor-pleno\backend\Products\Products.Presentation\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Matheus Saad\Documents\workspace\teste-desenvolvedor-pleno\backend\Products\Products.Presentation\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Matheus Saad\Documents\workspace\teste-desenvolvedor-pleno\backend\Products\Products.Presentation\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll

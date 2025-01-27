@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Products.Contracts.Exceptions;
 
-namespace Products.Server.Handlers;
+namespace Products.Presentation.Handlers;
 
 public class ExceptionHandler : IExceptionHandler
 {
@@ -12,7 +12,7 @@ public class ExceptionHandler : IExceptionHandler
         var problemDetails = CreateProblemDetails(exception);
         
         httpContext.Response.StatusCode = problemDetails.Status ?? StatusCodes.Status500InternalServerError;
-        await httpContext.Response.WriteAsJsonAsync(problemDetails.Detail, cancellationToken);
+        await httpContext.Response.WriteAsJsonAsync(problemDetails.Extensions, cancellationToken);
         return true;
     }
 
@@ -28,19 +28,19 @@ public class ExceptionHandler : IExceptionHandler
                 "Internal Server Error", "Ocorreu um erro desconhecido")
         };
 
-        if (exception is ValidationException validationException)
+        if (exception is CustomValidationException validationException)
         {
-            problemDetails.Extensions["errors"] = validationException.Errors;
+            problemDetails.Extensions["errors"] = validationException.ValidationErrors;
         }
         
         return problemDetails;
     }
 
-    private static ProblemDetails CreateProblemDetails(int statusCode, string title, string detail)
+    private static ProblemDetails CreateProblemDetails(int status, string title, string detail)
     {
         return new ProblemDetails
         {
-            Status = statusCode,
+            Status = status,
             Title = title,
             Detail = detail,
         };
