@@ -2,7 +2,18 @@ import { NavLink, useNavigate, useParams } from "react-router-dom";
 import {ChangeEvent, SyntheticEvent, useEffect, useState} from "react";
 import { ProductDto } from "../../models/ProductDto";
 import apiConnector from "../../api/apiConnector";
-import {Button, DropdownProps, Form, FormField, FormGroup, FormInput, FormSelect, Segment} from "semantic-ui-react";
+import {
+    Button,
+    DropdownProps,
+    Form,
+    FormField,
+    FormGroup,
+    FormInput,
+    FormSelect,
+    Message,
+    Segment
+} from "semantic-ui-react";
+
 import { CategoriesDto } from "../../models/CategoriesDto.ts";
 import { SuppliersDto } from "../../models/SuppliersDto.ts";
 import {OptionDto} from "../../models/OptionDto.ts";
@@ -12,6 +23,8 @@ export default function ProductForm() {
     const { id } = useParams();
     const navigate = useNavigate();
 
+    const [msg, setMsg] = useState('');
+    
     const [product, setProduct] = useState<ProductDto>({
         id: undefined,
         name: "",
@@ -98,6 +111,7 @@ export default function ProductForm() {
 
     return (
         <Segment clearing inverted>
+            <Message color='yellow'>{msg}</Message>
             <Form onSubmit={handleSubmit} autoComplete="off" className="ui inverted form">
                 <FormInput
                     placeholder="Nome"
@@ -147,7 +161,28 @@ export default function ProductForm() {
                         <span>Nenhum fornecedor</span>
                     )}
                 </FormGroup>
-                <Button floated="right" positive type="submit">
+                <Button floated="right" positive type="submit" onClick={
+                    () => {
+                        if (product.name === ''){
+                            setMsg('Preencha o Nome!')    
+                        }
+                        if (product.description === ''){
+                            setMsg('Preencha a Descrição!')    
+                        }
+                        if (product.price === 0){
+                            setMsg('Preencha o Preço!')    
+                        }
+                        if (product.quantity === 0){
+                            setMsg('Preencha a Quantidade!')    
+                        }
+                        if (product.categoryId === 0){
+                            setMsg('Por Favor selecione a categoria!')
+                        }
+                        if (selectedSuppliers.length === 0){
+                            setMsg('Por Favor selecione Fornecedores!')
+                        }
+                    }
+                }>
                     Salvar
                 </Button>
                 <Button as={NavLink} to="/" floated="right" type="button" content="Cancel" />
